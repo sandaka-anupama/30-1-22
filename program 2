@@ -1,0 +1,64 @@
+#Super Market bill
+bread=50
+cereal=100
+soups=200
+Rice=100
+chesse=250
+cpno=int(input('Enter customer phone number:'))
+cname=input('Enter customer name:')
+address=input('Enter address:')
+bq=int(input('How many bread packets you want:'))
+cq=int(input('How many cereal packets you want:'))
+sq=int(input('How many soup packets you want:'))
+Rq=int(input('How many rice packets you want:'))
+cq=int(input('How many chesse packets you want:'))
+coupon=input("Enter coupon code in capital letters:")
+bill=(bq*bread)+(cq*cereal)+(sq*soups)+(Rq*Rice)+(cq*chesse)
+if bill>3000:
+    tax=bill*5/100
+elif bill>2000:
+    tax=bill*7/100
+elif bill>500:
+    tax=bill*15/100
+else:
+    tax=100
+if coupon=='DIWALI' and bill>=5000:
+    dis=bill*10/100
+elif coupon=='DIWALI' and bill>=3000:
+    dis=bill*6/100
+elif coupon=='DIWALI' and bill>=1000:
+    dis=bill*4/100
+elif coupon=='CHRISMAS' and bil>=3000:
+    dis=bill*20/100
+elif coupon=='CHRISMAS' and bill>=2000:
+    dis=bill*10/100
+elif coupon=='CHRISMAS' and bill>=1000:
+    dis=bill*5/100
+else:
+    dis=0
+print("Bill without tax:",bill)
+print("Tax:",tax)
+bill=bill+tax-dis
+print("customer phone number:",cpno)
+print("customer name:",cname)
+print("Address:",address)
+
+print("Total bill:",bill)
+
+output:
+====================================================== RESTART: C:/Users/S ANUPAMA/AppData/Local/Programs/Python/Python311/sdc.py ======================================================
+Enter customer phone number:3546477
+Enter customer name:Latha
+Enter address:Kakinada
+How many bread packets you want:2
+How many cereal packets you want:3
+How many soup packets you want:4
+How many rice packets you want:5
+How many chesse packets you want:2
+Enter coupon code in capital letters:DIWALI
+Bill without tax: 2100
+Tax: 147.0
+customer phone number: 3546477
+customer name: Latha
+Address: Kakinada
+Total bill: 2163.0
