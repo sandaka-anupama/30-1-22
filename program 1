@@ -1,0 +1,45 @@
+#Super Market bill
+bread=50
+cereal=100
+soups=200
+Rice=100
+chesse=250
+cpno=int(input('Enter customer phone number:'))
+cname=input('Enter customer name:')
+address=input('Enter address:')
+bq=int(input('How many bread packets you want:'))
+cq=int(input('How many cereal packets you want:'))
+sq=int(input('How many soup packets you want:'))
+Rq=int(input('How many rice packets you want:'))
+cq=int(input('How many chesse packets you want:'))
+bill=(bq*bread)+(cq*cereal)+(sq*soups)+(Rq*Rice)+(cq*chesse)
+if bill>3000:
+    tax=bill*5/100
+elif bill>2000:
+    tax=bill*7/100
+elif bill>500:
+    tax=bill*15/100
+else:
+    tax=100
+Bill=bill+tax
+print("customer phone number:",cpno)
+print("customer name:",cname)
+print("Bill without tax:",bill)
+print("Tax:",tax)
+print("Total bill:",Bill)
+
+output:
+====================================================== RESTART: C:/Users/S ANUPAMA/AppData/Local/Programs/Python/Python311/sdc.py ======================================================
+Enter customer phone number:4575687
+Enter customer name:Latha
+Enter address:Kakinada
+How many bread packets you want:2
+How many cereal packets you want:3
+How many soup packets you want:1
+How many rice packets you want:2
+How many chesse packets you want:1
+customer phone number: 4575687
+customer name: Latha
+Bill without tax: 850
+Tax: 127.5
+Total bill: 977.5
